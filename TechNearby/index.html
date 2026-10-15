@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover hackathons, coding contests, workshops and technical events across India.">
+  <title>TechNearby — Find your next tech event</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-mark">T</span> TechNearby</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav id="mainNav"><a href="#events">Explore events</a><a href="submit.html">Post an event</a><a class="nav-admin" href="admin.html">Admin</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">INDIA'S TECH EVENT DISCOVERY HUB</span>
+      <h1>Your next big opportunity<br><span>starts nearby.</span></h1>
+      <p>Discover hackathons, coding contests, workshops and symposiums hosted by colleges and communities across India.</p>
+      <a class="button button-light" href="#events">Explore events <span aria-hidden="true">↘</span></a>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-chip chip-one">BUILD</div><div class="hero-chip chip-two">LEARN</div><div class="hero-chip chip-three">CONNECT</div><div class="hero-core">TN<span>✳</span></div></div>
+  </section>
+  <section class="stats" aria-label="Event types"><div><strong>01</strong><span>Discover opportunities</span></div><div><strong>02</strong><span>Learn with peers</span></div><div><strong>03</strong><span>Build your future</span></div></section>
+  <section class="events-section" id="events">
+    <div class="section-heading"><div><span class="eyebrow">FIND YOUR NEXT MOVE</span><h2>Explore tech events</h2><p class="muted">Only approved events appear here. Always verify details on the official host page.</p></div><a class="button button-primary" href="submit.html">＋ Submit an event</a></div>
+    <div class="filters">
+      <label class="search-field"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search event, college, organizer…" aria-label="Search events"></label>
+      <select id="stateFilter" aria-label="Filter by state"><option value="">All states</option></select>
+      <select id="categoryFilter" aria-label="Filter by category"><option value="">All categories</option><option>Hackathon</option><option>Coding</option><option>Workshop</option><option>Symposium</option><option>Other</option></select>
+      <select id="sortFilter" aria-label="Sort events"><option value="date">Soonest event</option><option value="deadline">Nearest deadline</option><option value="newest">Recently added</option></select>
+    </div>
+    <div class="results-line"><span id="resultsCount">Loading events…</span><button class="text-button" id="clearFilters">Clear filters</button></div>
+    <div id="eventGrid" class="event-grid"><div class="loading-card">Connecting to TechNearby…</div></div>
+    <div id="emptyState" class="empty-state" hidden><div class="empty-icon">⌕</div><h3>No matching events</h3><p>Try another keyword or clear your filters.</p><button class="button button-outline" id="emptyClear">Clear filters</button></div>
+    <p class="data-note" id="dataNote">Events are loaded from the TechNearby database.</p>
+  </section>
+  <section class="submit-banner"><div><span class="eyebrow">ORGANIZING SOMETHING GREAT?</span><h2>Help more students find your event.</h2><p>Submit your event for review. Once approved, it will be listed for students across India.</p></div><a class="button button-light" href="submit.html">Post an event →</a></section>
+</main>
+<footer class="site-footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark">T</span> TechNearby</a><span>Discover. Build. Connect.</span><span>Check official event pages for final details.</span></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script><script src="script.js"></script>
+</body></html>
